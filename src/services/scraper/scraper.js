@@ -39,6 +39,7 @@ async function scrapeStory(browser, storyURL) {
         author : await getAuthor(page),
         date : await getPublishedDate(page),
         tags : await getPageTags(page),
+        storyURL : storyURL,
         imageURL : await getImageUrl(page),
         category : new URL(storyURL).pathname.split('/')[1],
         screenshotURL : await getScreenshortURL(page),
