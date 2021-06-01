@@ -27,9 +27,12 @@ async function scrapeStories(browser, page_url, num_stories = 5) {
 async function scrapeStory(browser, storyURL) {
     let page = await browser.newPage();
     await page.goto(storyURL);
+    await page.waitForSelector('.current');
 
     try {
         await page.click('.ot-sdk-container button#onetrust-accept-btn-handler');
+        await page.waitForTimeout(500);
+
     } catch (e) {
         console.log("Cannot close cookies popup")
     }
@@ -103,7 +106,7 @@ async function getPageTags(page) {
 
 async function getImageUrl(page) {
     try {
-        return await page.$eval('figure img', (image) => {
+        return await page.$eval('figure.image.image-large img', (image) => {
             return image.src;
         });
     } catch (err) {
