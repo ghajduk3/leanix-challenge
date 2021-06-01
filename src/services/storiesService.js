@@ -1,15 +1,17 @@
-import {scrapeStories,scrapeStory} from "./scraper/scraper";
-const puppeter = require("puppeteer");
-import {setupCloudinary} from "../utils/utilities";
-const PAGE_URL = "https://www.cnet.com/";
+import { scrapeStories } from './scraper/scraper';
 
-async function getLatestStories(){
-    let browser = await puppeter.launch({headless: true,
-        args: ['--no-sandbox','--disable-setuid-sandbox']});
-    let stories =  await scrapeStories(browser, PAGE_URL,5);
-    await browser.close();
-    return stories;
+const puppeter = require('puppeteer');
+
+const PAGE_URL = 'https://www.cnet.com/';
+
+async function getLatestStories() {
+  const browser = await puppeter.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
+  const stories = await scrapeStories(browser, PAGE_URL, 5);
+  await browser.close();
+  return stories;
 }
 
-export {getLatestStories};
-
+export { getLatestStories };

@@ -10,7 +10,7 @@
     "server": "node dist/bin/www.js",
     "dev": "NODE_ENV=dev npm-run-all build server",
     "prod": "NODE_ENV=prod npm-run-all build server",
-    "start": "npm run prod",
+    "start": "npm run dev",
     "watch:dev": "nodemon"
   },
   "dependencies": {
