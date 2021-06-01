@@ -5,7 +5,8 @@ const PAGE_URL = "https://www.cnet.com/";
 
 async function getLatestStories(){
     setupCloudinary();
-    let browser = await puppeter.launch({headless : true});
+    let browser = await puppeter.launch({headless: true,
+        args: ['--no-sandbox','--disable-setuid-sandbox']});
     let stories =  await scrapeStories(browser, PAGE_URL,1);
     await browser.close();
     return stories;
