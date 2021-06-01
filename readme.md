@@ -76,7 +76,7 @@ In the following subsections I present a brief explanation of what the system is
 To achieve the required functionalities efficiently, we need the following endpoints: All the enpoints are exposed on the `/` base mapping.
 
 **GET methods**
-* `GET \` 
+* `GET \hello` 
     * welcome endpoint
     * produces a `SuccessResponse`
     
@@ -86,6 +86,7 @@ To achieve the required functionalities efficiently, we need the following endpo
 **STORY SUMMARY**
 
 Each story summary exposes JSON with following fields:
+** SAMPLE DATA ** 
 ```angular2html
 {
     "title": "How fast is my internet? One easy way to tell if your connection's as slow as it feels",
@@ -102,7 +103,7 @@ Each story summary exposes JSON with following fields:
     "imageURL": "https://www.cnet.com/a/img/mGmnNTitScps8RFrzaLqmdL6pZU=/2021/05/13/12fccba5-6244-4368-9c24-a16d84c29dbb/hp-elite-folio-13-5-inch-2-in-1-notebook-pc-cnet-2021-014.jpg",
     "category": "home",
     "screenshotURL": "http://res.cloudinary.com/ghajduk/image/upload/v1622549788/cjzybfhkbkh2u7xch0vo.png",
-    "pdfURL": null
+    "pdfURL": "http://res.cloudinary.com/ghajduk/image/upload/v1622560766/ulvpcb4x5zz6zdlgctg5.pdf"
 }
 ```
 If the scraper cannot find specific field information it inserts `null` as a field value.
