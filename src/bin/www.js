@@ -9,6 +9,7 @@ import debugLib from 'debug';
 import regeneratorRuntime from 'regenerator-runtime';
 import dotenv from 'dotenv';
 import app from '../app';
+import {setupCloudinary} from "../utils/utilities";
 
 dotenv.config();
 const debug = debugLib('leanix-challenge:server');
@@ -17,8 +18,11 @@ const debug = debugLib('leanix-challenge:server');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '8091');
+const port = normalizePort(process.env.PORT || '8085');
 app.set('port', port);
+
+setupCloudinary();
+
 
 /**
  * Create HTTP server.

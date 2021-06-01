@@ -25,6 +25,7 @@ async function scrapeStories(browser, page_url, num_stories = 5) {
 }
 
 async function scrapeStory(browser, storyURL) {
+    console.log("Scraping story : ", storyURL);
     let page = await browser.newPage();
     await page.goto(storyURL);
     await page.waitForSelector('.current');
