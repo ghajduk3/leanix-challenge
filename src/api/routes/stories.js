@@ -11,4 +11,10 @@ export default (app) => {
         res.setHeader('Content-Type', 'application/json');
         return res.json(stories);
     });
+
+    route.get('/hello',async (req, res) => {
+        // const stories = await getLatestStories();
+        // res.setHeader('Content-Type', 'application/json');
+        return res.json("Hello");
+    });
 };
