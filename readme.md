@@ -107,9 +107,6 @@ Each story summary exposes JSON with following fields:
 ```
 If the scraper cannot find specific field information it inserts `null` as a field value.
 
-**Live demo**
-
-The application is deployed on `heroku`. Live demo is accessible at this [link](https://gentle-thicket-87322.herokuapp.com/stories).
 
 
 
