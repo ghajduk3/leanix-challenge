@@ -30,13 +30,13 @@ async function scrapeStory(browser, storyURL) {
     await page.goto(storyURL);
     await page.waitForSelector('.current');
 
-    try {
-        await page.click('.ot-sdk-container button#onetrust-accept-btn-handler');
-        await page.waitForTimeout(500);
-
-    } catch (e) {
-        console.log("Cannot close cookies popup")
-    }
+    // try {
+    //     await page.click('.ot-sdk-container button#onetrust-accept-btn-handler');
+    //     await page.waitForTimeout(500);
+    //
+    // } catch (e) {
+    //     console.log("Cannot close cookies popup")
+    // }
     return {
         title : await getTitle(page),
         summary : await getSummary(page),
