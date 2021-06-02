@@ -34,8 +34,6 @@ Each summary of the story should include:
 
 For scraping use Puppeteer library (https://github.com/GoogleChrome/puppeteer).
 Publish your code on GitHub and send a link to the repository.
-Please feel free to reach out to Matjaz Grosek at Matjaz.Grosek@leanix.net for any questions related to the task.
-Wish you all the best in your preparation.
 
 <a name="setup"></a>
 ### Setup
@@ -76,11 +74,11 @@ In the following subsections I present a brief explanation of what the system is
 To achieve the required functionalities efficiently, we need the following endpoints: All the enpoints are exposed on the `/` base mapping.
 
 **GET methods**
-* `GET \hello` 
+* `GET /hello` 
     * welcome endpoint
     * produces a `SuccessResponse`
     
-* `GET \stories`
+* `GET /stories`
     * produces a list of `JSONs` with summaries for five latest stories published at https://www.cnet.com/.
 
 **STORY SUMMARY**
