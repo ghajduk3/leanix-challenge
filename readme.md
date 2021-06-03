@@ -34,8 +34,6 @@ Each summary of the story should include:
 
 For scraping use Puppeteer library (https://github.com/GoogleChrome/puppeteer).
 Publish your code on GitHub and send a link to the repository.
-Please feel free to reach out to Matjaz Grosek at Matjaz.Grosek@leanix.net for any questions related to the task.
-Wish you all the best in your preparation.
 
 <a name="setup"></a>
 ### Setup
@@ -76,16 +74,17 @@ In the following subsections I present a brief explanation of what the system is
 To achieve the required functionalities efficiently, we need the following endpoints: All the enpoints are exposed on the `/` base mapping.
 
 **GET methods**
-* `GET \` 
+* `GET /hello` 
     * welcome endpoint
     * produces a `SuccessResponse`
     
-* `GET \stories`
+* `GET /stories`
     * produces a list of `JSONs` with summaries for five latest stories published at https://www.cnet.com/.
 
 **STORY SUMMARY**
 
 Each story summary exposes JSON with following fields:
+** SAMPLE DATA ** 
 ```angular2html
 {
     "title": "How fast is my internet? One easy way to tell if your connection's as slow as it feels",
@@ -102,14 +101,11 @@ Each story summary exposes JSON with following fields:
     "imageURL": "https://www.cnet.com/a/img/mGmnNTitScps8RFrzaLqmdL6pZU=/2021/05/13/12fccba5-6244-4368-9c24-a16d84c29dbb/hp-elite-folio-13-5-inch-2-in-1-notebook-pc-cnet-2021-014.jpg",
     "category": "home",
     "screenshotURL": "http://res.cloudinary.com/ghajduk/image/upload/v1622549788/cjzybfhkbkh2u7xch0vo.png",
-    "pdfURL": null
+    "pdfURL": "http://res.cloudinary.com/ghajduk/image/upload/v1622560766/ulvpcb4x5zz6zdlgctg5.pdf"
 }
 ```
 If the scraper cannot find specific field information it inserts `null` as a field value.
 
-**Live demo**
-
-The application is deployed on `heroku`. Live demo is accessible at this [link](https://gentle-thicket-87322.herokuapp.com/stories).
 
 
 
