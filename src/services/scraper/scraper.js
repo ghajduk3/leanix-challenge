@@ -25,7 +25,6 @@ async function scrapeStory(browser, storyURL) {
   console.log('Scraping story : ', storyURL);
   const page = await browser.newPage();
   await page.goto(storyURL);
-  await page.waitForSelector('.current');
 
   try {
     await page.click('.ot-sdk-container button#onetrust-accept-btn-handler');
@@ -42,8 +41,8 @@ async function scrapeStory(browser, storyURL) {
     storyURL,
     imageURL: await getImageUrl(page),
     category: new URL(storyURL).pathname.split('/')[1],
-    screenshotURL: await getScreenshortURL(page),
-    pdfURL: await getPdfURL(page),
+    // screenshotURL: await getScreenshortURL(page),
+    // pdfURL: await getPdfURL(page),
   };
 }
 
